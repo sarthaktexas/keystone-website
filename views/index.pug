@@ -1,0 +1,125 @@
+extends layout
+
+block content
+  .row
+    .col.align-self-center#resizeimagecontainer
+      img.resizeimage(src='img/header-image.jpg', alt='')
+    .col.text-center
+      img.img-fluid(src='https://static.wixstatic.com/media/4e2504_b7c2f9be24d94675bd69036a3311ee58~mv2.png', width='300px', alt='keystone logo with gradient water under it')
+      br
+      br
+      p.lead Empowering the voices within to inspire <br> the connections throughout.
+      br
+      a.btn.btn-outline-dark.rounded-pill(href='/find-a-mentor') Find a Mentor
+      br
+      br
+  br
+  .jumbotron.jumbotron-fluid.jumbotron-blue.vertical-center
+    .container.text-center
+      img(src='https://static.wixstatic.com/media/4e2504_4cbe0fadceff4db3aa899895078481bf~mv2.png', width='200', height='200', alt='keystone shield')
+      br
+      br
+      h1.uppercase Our Mission
+      br
+      p.container.lead
+        | Keystone Mentorship is a 501(c)(3) organization made up of high school students that aims 
+        | to provide both academic and peer support amidst the COVID-19 pandemic and beyond. 
+        | Our program matches a high school mentor and a middle school mentee to create a support system 
+        | through homework help, tutoring, time & stress management, academic & high school advice, friendship, etc. 
+        | Keystone strives to provide support during this tumultuous time, where younger students may be feeling 
+        | isolated, anxious, or just simply lack the academic support they require. 
+        | It is our mission to ensure that every student has the chance to receive this opportunity and know 
+        | they are never alone during this crisis and that there are dedicated students willing to reach out 
+        | and help them.
+  br
+  .jumbotron.jumbotron-fluid.jumbotron-video-background.vertical-center#about
+    .container.text-center
+      .jumbotron-video-background-inside
+        h1.text-white(style='font-family: "Montserrat", sans-serif; font-weight: 500;') Who We Are - Keystone Mentorship
+        br
+        a.btn.btn-outline-light(href='#', data-toggle='modal', data-target='#videoModal', data-thevideo='http://www.youtube.com/embed/KX-WFO2OdnM') #[i.fas.fa-play] &nbsp; Play Video
+        #videoModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+          .modal-dialog(role='document')
+            .modal-content
+              .modal-body
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                  span(aria-hidden='true') &times;
+                // 16:9 aspect ratio
+                .embed-responsive.embed-responsive-16by9
+                  iframe#video.embed-responsive-item(src='', allowscriptaccess='always', allow='autoplay')
+      script.
+        function autoPlayYouTubeModal() {
+            var trigger = $("body").find('[data-toggle="modal"]');
+            trigger.click(function() {
+                var theModal = $(this).data("target"),
+                    videoSRC = $(this).attr("data-thevideo"),
+                    videoSRCauto = videoSRC + "?autoplay=1";
+                $(theModal + ' iframe').attr('src', videoSRCauto);
+                $(theModal + ' button.close').click(function() {
+                    $(theModal + ' iframe').attr('src', videoSRC);
+                });
+            });
+        }
+        $(document).ready(function() {
+            autoPlayYouTubeModal();
+        });
+  .jumbotron-jumbotron-fluid.jumbotron-gray.vertical-center.row
+    .col.text-center
+      h1.uppercase Apply to be a Mentor
+      br
+      p.container-text.lead
+        | Are you a high school student who is interested in supporting our cause 
+        | and becoming a part of our team? Interested in earning official volunteer hours 
+        | towards #[a(href='https://www.presidentialserviceawards.gov/') PVSA]? Apply today!
+      br
+      br
+      a.btn.btn-outline-dark.rounded-pill(href='/find-a-mentor') Become a Mentor
+    .col.align-self-center.w-100.h-100#resizeimagecontainer
+      img.resizeimage(src='img/image2.jpg', alt='student sitting at desk with smile')
+  br
+  .jumbotron.jumbotron-fluid.jumbotron-blue.vertical-center
+    .container.text-center
+      h1.uppercase Want to start a Keystone branch?
+      br
+      p.container.lead
+        | We are now accepting applications from individuals who are interested in becoming 
+        | a Keystone branch director! Please follow the directions in the document below.
+      br
+      a.btn.btn-outline-dark.rounded-pill(href='/find-a-mentor') Start a Branch
+  br
+  .jumbotron.jumbotron-fluid.bg-white.vertical-center
+    .container.text-center
+      h1.uppercase Contact Keystone
+      br
+      form.contact-form.clearfix.pageclip-form(action='https://send.pageclip.co/Ki9aSqjN5rUUB4bhnQT1grx56PFmypxo/contact-form', method='post')
+        .row
+          .form-field.col.x-50
+            input#name.input-text.js-input(type='text', name='Parent/Guardian Name', required='')
+            label.label(for='name') Parent/Guardian Name
+          .form-field.col.x-50
+            input#email.input-text.js-input(type='email', name='Parent/Guardian Email', required='')
+            label.label(for='email') Parent/Guardian Email
+        .row
+          .form-field.col.x-100
+            input#subject.input-text.js-input(type='text', name='Subject', required='')
+            label.label(for='subject') Subject
+        .row
+          .form-field.col.x-100
+            input#message.input-text.js-input(type='text', name='Message', required='')
+            label.label(for='message') Message
+        .row
+          .form-field.col.x-100
+            input#phone.input-text.js-input(type='tel', name='Parent/Guardian Phone #', required='')
+            label.label(for='phone') Parent/Guardian Phone #
+        .form-field.col.x-100.align-center
+          button.submit-btn.pageclip-form__submit(type='submit')
+            span Submit
+      script.
+        $( '.js-input' ).keyup(function() {
+          if( $(this).val() ) {
+            $(this).addClass('not-empty');
+          } else {
+            $(this).removeClass('not-empty');
+          }
+        });
+  br

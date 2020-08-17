@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir.otf');
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Avenir', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socialicons a {
+  color: black;
+}
+
+.socialicons a:hover {
+  color: #1B2C57;
+}
+
+.dropdown-menu .sub-menu {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  margin-top: -1px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.socialicons i {
+  font-size: large;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  #resizeimagecontainer {
+    display: none;
+  }
+
+  #about {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  #socialiconheader {
+    display: none;
+  }
+}
+
+.resizeimage {
+  max-width: 100%;
+  /* width of container */
+  height: 400px;
+  /* height of container */
+  object-fit: cover;
+}
+
+.button-link,
+.button-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.bg-white {
+  background: white;
+}
+
+.jumbotron-blue {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(227, 242, 243, 1) 5%, rgba(227, 242, 243, 1) 95%, rgba(255, 255, 255, 1) 100%);
+}
+
+.jumbotron-gray {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(247, 247, 247, 1) 5%, rgba(247, 247, 247, 1) 95%, rgba(255, 255, 255, 1) 100%);
+}
+
+.jumbotron-orange {
+  background: #FFF7E0;
+}
+
+.jumbotron-video-background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background-image: url('https://img.youtube.com/vi/KX-WFO2OdnM/maxresdefault.jpg');
+  filter: brightness(30%);
+  background-position: center;
+}
+
+.jumbotron-video-background-inside {
+  position: relative;
+}
+
+.jumbotron-video-background {
+  position: relative;
+  height: 500px;
+}
+
+.vertical-center {
+  min-height: 100%;
+  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  /* These two lines are counted as one :-)       */
+  display: flex;
+  align-items: center;
+}
+
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+  color: black
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+footer h5 {
+  padding-bottom: 1ch;
+}
+
+footer p {
+  padding-top: 1ch;
+}
+
+.container-text {
+  margin: 0 6rem 0 6rem;
+}
+
+.team-card {
+  position: relative;
+  overflow: hidden;
+  width: 208px;
+  height: 278px;
+}
+
+.team-card .team-footer {
+  position: absolute;
+  width: 94.5%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 20px 5px 10px 5px;
+  z-index: 10;
+}
+
+.team-card h4 {
+  margin-bottom: 1ch;
+  color: white;
+}
+
+.team-card p {
+  color: white;
+  margin-bottom: 0;
+}
+
+.team-card .team-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 44, 87, 0.6);
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: -1;
+  transition: all .6s ease
+}
+
+.team-card .team-overlay .social-icons i,
+.team-card .team-overlay .social-icons span {
+  font-size: 20px;
+  margin-bottom: 1em;
+  color: #fff;
+}
+
+.team-card .team-overlay .social-icons li {
+  margin-bottom: 4px;
+  list-style-type: none;
+}
+
+.team-card .team-overlay .social-icons a:hover i,
+.team-card .team-overlay .social-icons a:hover span {
+  color: #98CBDF;
+}
+
+.team-card:hover .team-overlay {
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 1
+}
+
+.team-card .card-img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.team-card-border {
+  width: 208px;
+}
+
+.team-container {
+  margin: 0 1rem 0 1rem;
+}
+
+.contact-form .form-field {
+  position: relative;
+  margin: 32px 0;
+}
+
+.contact-form .input-text {
+  display: block;
+  width: 100%;
+  height: 36px;
+  border-width: 0 0 2px 0;
+  border-color: #000;
+  font-family: 'Avenir', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact-form .input-text:focus {
+  outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+  transform: translateY(-24px);
+}
+
+.contact-form .label {
+  position: absolute;
+  left: 20px;
+  bottom: 11px;
+  font-family: 'Josefin Sans', serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #888;
+  cursor: text;
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact-form .submit-btn:hover {
+  background-color: #303030;
+  border-radius: 0%;
+}

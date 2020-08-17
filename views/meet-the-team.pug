@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  // 208x278
+  .jumbotron.jumbotron-fluid.bg-white.vertical-center
+    .container.text-center
+      h1.display-4 Core Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in coreteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt='')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a(href=member.linkedin)
+                      i.fab.fa-linkedin-in#socialicon
+                    a(href=member.instagram)
+                      i.fab.fa-instagram#socialicon
+                    a(href=member.facebook)
+                      i.fab.fa-facebook-f#socialicon
