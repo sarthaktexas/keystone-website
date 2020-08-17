@@ -5,6 +5,26 @@ block content
     .uppercase {
       font-size: 3rem;
     }
+    a:hover {
+      text-decoration: none;
+    }
   .jumbotron.jumbotron-fluid.bg-white
     .container.text-center
-      h1.display-4.uppercase Find a Mentor
+      h1.display-4.uppercase Policies
+      br
+      p.container-text
+        | We ask that all involved parties agree to the following forms in order to ensure 
+        | the safety of both our mentors and our mentees. 
+      br
+      br
+      .d-flex.flex-wrap.justify-content-center
+        .d-flex.ml-4.mr-4
+          a(href='files/codeofconduct.pdf', target='_blank')
+            img(src='icons/pdficon.png', width='50px', alt='pdf icon')
+            br
+            p.mt-2 Keystone Code <br> of Conduct
+        .d-flex.ml-4.mr-4
+          a(href='files/photoreleasewaiver.pdf', target='_blank')
+            img(src='icons/pdficon.png', width='50px', alt='pdf icon')
+            br
+            p.mt-2 Photo Release <br> Consent Waiver

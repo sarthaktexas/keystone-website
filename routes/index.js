@@ -43,6 +43,14 @@ router.get('/find-a-mentor', function (req, res, next) {
   });
 });
 
+/* GET mentors page. */
+router.get('/mentors', function (req, res, next) {
+  res.render('mentors', {
+    title: 'Keystone Mentorship - Mentors'
+  });
+});
+
+
 /* GET our-badges page. */
 router.get('/our-badges', function (req, res, next) {
   res.render('our-badges', {
