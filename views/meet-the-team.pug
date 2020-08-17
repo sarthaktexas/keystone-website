@@ -1,24 +1,147 @@
 extends layout
 
 block content
-  // 208x278
+  style.
+    .uppercase {
+      font-size: 3rem;
+    }
   .jumbotron.jumbotron-fluid.bg-white.vertical-center
     .container.text-center
-      h1.display-4 Core Leadership
+      h1.display-4.uppercase Core Leadership
       br
       .d-flex.flex-wrap.justify-content-center.team-container
         each member in coreteam
           .d-flex.p-1
             .team-card
-              img.card-img.rounded-0(src=member.image, alt='')
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
               .team-overlay
                 .team-footer
                   h4= member.name
                   p= member.position
                   .social-icons
-                    a(href=member.linkedin)
-                      i.fab.fa-linkedin-in#socialicon
-                    a(href=member.instagram)
-                      i.fab.fa-instagram#socialicon
-                    a(href=member.facebook)
-                      i.fab.fa-facebook-f#socialicon
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.jumbotron-blue.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Cupertino HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in cupertinoteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.bg-white.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Evergreen Valley HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in evergreenvalleyteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.jumbotron-blue.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Leigh HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in leighteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.bg-white.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Lynbrook HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in lynbrookteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.jumbotron-blue.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Monta Vista HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in montavistateam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f
+  .jumbotron.jumbotron-fluid.bg-white.vertical-center
+    .container.text-center
+      h1.display-4.uppercase Valley Christian HS Leadership
+      br
+      .d-flex.flex-wrap.justify-content-center.team-container
+        each member in valleychristianteam
+          .d-flex.p-1
+            .team-card
+              img.card-img.rounded-0(src=member.image, alt=member.name + ' picture')
+              .team-overlay
+                .team-footer
+                  h4= member.name
+                  p= member.position
+                  .social-icons
+                    a#socialicon(href=member.linkedin)
+                      i.fab.fa-linkedin-in
+                    a#socialicon(href=member.instagram)
+                      i.fab.fa-instagram
+                    a#socialicon(href=member.facebook)
+                      i.fab.fa-facebook-f                    
