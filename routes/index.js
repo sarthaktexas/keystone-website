@@ -86,11 +86,4 @@ router.get('/special-thanks', function (req, res, next) {
   });
 });
 
-/* GET catch-all page. */
-router.get('*', function (req, res, next) {
-  res.render('404', {
-    title: 'Keystone Mentorship - 404 - Not Found'
-  });
-});
-
 module.exports = router;

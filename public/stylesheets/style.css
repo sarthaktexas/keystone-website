@@ -21,7 +21,9 @@ h6 {
   font-weight: 300;
 }
 
-p, nav, .btn {
+p,
+nav,
+.btn {
   font-family: 'Avenir', sans-serif;
 }
 
@@ -44,7 +46,8 @@ a:hover {
 }
 
 .social-icons-footer a {
-  color: black;font-size: large;
+  color: black;
+  font-size: large;
   padding: 10px;
 }
 

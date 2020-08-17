@@ -1,4 +1,5 @@
 var express = require('express');
+var router = express.Router();
 var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -53,7 +54,7 @@ app.use(cookieParser());
 
 // config express-session
 var sess = {
-  secret: 'CHANGE THIS SECRET',
+  secret: 'keystone-mentorship',
   cookie: {},
   resave: false,
   saveUninitialized: true
@@ -67,7 +68,7 @@ if (app.get('env') === 'production') {
   // errors with passport-auth0.
   // Ref: https://github.com/auth0/passport-auth0/issues/70#issuecomment-480771614
   // Ref: https://www.npmjs.com/package/express-session#cookiesecure
-  // app.set('trust proxy', 1);
+  app.set('trust proxy', 1);
   
   sess.cookie.secure = true; // serve secure cookies, requires https
 }
@@ -95,6 +96,13 @@ app.use(userInViews());
 app.use('/', authRouter);
 app.use('/', indexRouter);
 app.use('/', usersRouter);
+
+/* GET catch-all page. */
+router.get('*', function (req, res, next) {
+  res.render('404', {
+    title: 'Keystone Mentorship - 404 - Not Found'
+  });
+});
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {

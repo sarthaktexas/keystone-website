@@ -53,8 +53,12 @@ body
         li.nav-item#socialiconheader
           a.nav-link(href='https://facebook.com/')
             i.fab.fa-facebook-f
-        li.nav-item#socialiconheader
-          a.nav-link(href='/login') Login
+        if locals.user
+          li.nav-item
+            a.nav-link(href='/logout') Logout
+        else
+          li.nav-item
+            a.nav-link(href='/login') Login
   block content
   footer.text-center
     h4 Keystone
